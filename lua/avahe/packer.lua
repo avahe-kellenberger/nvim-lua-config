@@ -14,16 +14,16 @@ return require('packer').startup(function(use)
   }
 
   use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
+	  'Mofiqul/dracula.nvim',
+	  as = 'dracula',
 	  config = function()
-		  vim.cmd('colorscheme rose-pine')
+		  vim.cmd('colorscheme dracula')
 	  end
   })
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-  use('tpope/vim-fugitive')
+  use 'tpope/vim-fugitive'
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -47,6 +47,11 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
+
+  use 'famiu/bufdelete.nvim'
+  use 'tpope/vim-unimpaired'
+
+  use 'airblade/vim-gitgutter'
 
 end)
 
